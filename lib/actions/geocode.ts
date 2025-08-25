@@ -29,7 +29,13 @@ export async function getCountryFromCoordinates(
 
   const formattedAddress = result.place_name || "Unknown";
 
-  const countryComponent = result.context?.find((component: any) =>
+  interface ContextComponent {
+    id: string;
+    text: string;
+    [key: string]: unknown;
+  }
+
+  const countryComponent = result.context?.find((component: ContextComponent) =>
     component.id.startsWith("country")
   );
 

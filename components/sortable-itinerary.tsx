@@ -84,7 +84,7 @@ export default function SortableItinerary({
           newOptimisticOrder.map((item) => item.id)
         );
         toast.success("Itinerary reordered successfully!");
-      } catch (error) {
+      } catch {
         toast.error("Failed to reorder. Reverting changes.");
         setLocalLocations(originalOrder);
       }
