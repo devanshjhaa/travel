@@ -1,11 +1,12 @@
 import { auth } from "@/auth";
-import {prisma} from "@/lib/prisma";
-import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
+import { NextResponse } from "next/server";
 
-export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { locationId: string } }
-) {
+interface RouteParams {
+  params: { locationId: string };
+}
+
+export async function DELETE(request: Request, { params }: RouteParams) {
   try {
     const session = await auth();
     const userId = session?.user?.id;
@@ -23,9 +24,7 @@ export async function DELETE(
     const location = await prisma.location.findUnique({
       where: { id: locationId },
       include: {
-        trip: {
-          select: { userId: true },
-        },
+        trip: { select: { userId: true } },
       },
     });
 
