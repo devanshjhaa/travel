@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function DELETE(
   request: Request,
-  { params }: { params: { locationId: string } }
+  context: { params: { locationId: string } }
 ) {
   try {
     const session = await auth();
@@ -13,13 +13,13 @@ export async function DELETE(
     if (!userId) {
       return new NextResponse("Not authenticated", { status: 401 });
     }
+    
+    const { locationId } = context.params;
 
-    const { locationId } = params;
     if (!locationId) {
       return new NextResponse("Location ID is required", { status: 400 });
     }
 
-    //  Authorization:
     const location = await prisma.location.findUnique({
       where: {
         id: locationId,
@@ -41,7 +41,6 @@ export async function DELETE(
       return new NextResponse("Forbidden: You do not own this trip", { status: 403 });
     }
 
-    //  Deletion:
     await prisma.location.delete({
       where: {
         id: locationId,
