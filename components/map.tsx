@@ -18,7 +18,7 @@ export default function ItineraryMap({ itineraries }: MapProps) {
   useEffect(() => {
     if (!mapContainerRef.current) return;
 
-    const center =
+    const center: [number, number] =
       itineraries.length > 0
         ? [itineraries[0].lng, itineraries[0].lat]
         : [0, 0];
