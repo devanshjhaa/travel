@@ -18,10 +18,11 @@ Deployed on **Vercel**.
 
 ## 📁 Project Structure
 Travelo/
-├─ client/ # Next.js app (frontend)
-
-├─ screenshots/ # Project screenshots for README
-
+├─ app/ # Next.js app directory
+├─ components/ # UI components
+├─ lib/ # Utilities
+├─ public/ # Static assets
+├─ screenshots/ # Project screenshots
 └─ README.md
 
 Install dependencies
