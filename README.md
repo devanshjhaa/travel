@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travelo – Travel Itinerary Planner
 
-## Getting Started
+A travel itinerary planner built with **Next.js, TypeScript, and TailwindCSS**.  
+Features **interactive maps**, **drag-and-drop scheduling**, and day-by-day trip organization.  
+Deployed on **Vercel**.  
 
-First, run the development server:
+🔗 Live Demo → [Travelo](https://travel-weld-three.vercel.app/)
 
-```bash
+---
+
+## 🛠 Tech Stack
+- **Frontend:** Next.js, TypeScript, TailwindCSS, shadcn/ui  
+- **Maps & Geolocation:** (Leaflet.js / Mapbox – update based on what you actually used)  
+- **State Management:** React Hooks  
+- **Deployment:** Vercel  
+
+---
+
+## 📁 Project Structure
+Travelo/
+├─ client/ # Next.js app (frontend)
+
+├─ screenshots/ # Project screenshots for README
+
+└─ README.md
+
+Install dependencies
+npm install
+
+Configure environment variables
+
+.env.local
+
+NEXT_PUBLIC_MAP_API_KEY=your_api_key   # if required
+
+Run locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now open → http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🚀 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create and organize day-by-day itineraries
 
-## Learn More
+Interactive maps for trip visualization
 
-To learn more about Next.js, take a look at the following resources:
+Drag-and-drop scheduling for easy itinerary management
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Clean and responsive UI with TailwindCSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Screenshots
 
-## Deploy on Vercel
+### Dashboard
+![Dashboard](./screenshots/Dashboard.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### My Trips
+![My Trips](./screenshots/Mytrips.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Itinerary Planner
+![Itinerary](./screenshots/Itinerary.png)
+
+### Globe View
+![Globe](./screenshots/Globe.png)
