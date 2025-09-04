@@ -38,7 +38,7 @@ Travelo/
 ## ⚙️ Setup
 
 ### 1) Clone the repository
-```bash
+``bash
 git clone https://github.com/devanshjhaa/travel.git
 cd travel
 
@@ -56,7 +56,7 @@ Run locally
 npm run dev
 
 Now open → http://localhost:3000
-
+----
 🚀 Features
 
 Create and organize day-by-day itineraries
