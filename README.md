@@ -19,10 +19,17 @@ Deployed on **Vercel**.
 ## 📁 Project Structure
 Travelo/
 ├─ app/ # Next.js app directory
-├─ components/ # UI components
-├─ lib/ # Utilities
+
+├─ components/ # Reusable UI components
+
+├─ lib/ # Utility functions
+
+├─ prisma/ # Prisma schema & migrations
+
 ├─ public/ # Static assets
+
 ├─ screenshots/ # Project screenshots
+
 └─ README.md
 
 Install dependencies
