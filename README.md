@@ -10,7 +10,7 @@ Deployed on **Vercel**.
 
 ## 🛠 Tech Stack
 - **Frontend:** Next.js, TypeScript, TailwindCSS, shadcn/ui  
-- **Maps & Geolocation:** (Leaflet.js / Mapbox – update based on what you actually used)  
+- **Maps & Geolocation:** Mapbox 
 - **State Management:** React Hooks  
 - **Deployment:** Vercel  
 
